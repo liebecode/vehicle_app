@@ -1,0 +1,24 @@
+version: "3"
+services:
+  frontend:
+    container_name: vehicle_app_web
+    build:
+      context: ./FE
+      dockerfile: Dockerfile
+    environment:
+      - REACT_APP_GOOGLE_KEY='use your own api key :)'
+    image: shaun/vehicle_app_web
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./FE:/usr/src/app
+  backend:
+    container_name: vehicle_app_server
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    image: shaun/vehicle_app_server
+    ports:
+      - "5011:5011"
+    volumes:
+      - ./server:/usr/src/app
