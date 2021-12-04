@@ -19,5 +19,5 @@ From '/Server', run 'npm i', then 'npm run dev'
 
 #### Start the app with Docker:
 From '/FE', run 'npm i'.
-From '/Server', run 'npm i', then 'npm run dev'
+From '/Server', run 'npm i'.
 From '/vehicle_app', run 'docker compose up'
